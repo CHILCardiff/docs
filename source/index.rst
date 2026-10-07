@@ -3,13 +3,9 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-CHIL documentation
-==================
-
-Add your content using ``reStructuredText`` syntax. See the
-`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-documentation for details.
-
+Documentation
+=============
+This document compiles information on how to assembly, service and deploy CHIL instruments (Cryoegg, Cryowurst) and dataloggers.
 
 .. toctree::
    :maxdepth: 4
