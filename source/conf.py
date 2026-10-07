@@ -31,4 +31,4 @@ html_theme_options = {
     "navigation_depth" : 3,
     "collapse_navigation" : False
 }
-html_logo = '_static/logo.png'
+html_logo = '_static/img/logo.png'
