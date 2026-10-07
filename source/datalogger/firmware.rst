@@ -1,2 +1,0 @@
-Firmware and programming
-========================
