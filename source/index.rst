@@ -17,4 +17,5 @@ documentation for details.
    
    instruments/index
    datalogger/index
+   deployment/index
    

@@ -5,6 +5,6 @@ Deployment
    :maxdepth: 2
    :caption: Contents:
 
-    Cryoegg
-    Cryowurst
-    Datalogger
+   cryoegg
+   cryowurst
+   datalogger
