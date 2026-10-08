@@ -8,10 +8,11 @@ Documentation
 This document compiles information on how to assembly, service and deploy CHIL instruments (Cryoegg, Cryowurst) and dataloggers.
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 2
    :caption: Contents:
    
+   Home <self>
+   Software setup <devtools>
    instruments/index
    datalogger/index
    deployment/index
-   
