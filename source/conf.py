@@ -32,3 +32,5 @@ html_theme_options = {
     "collapse_navigation" : False
 }
 html_logo = '_static/img/logo.png'
+
+numfig = True
