@@ -1,0 +1,746 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Development environment &#8212; CHIL Documentation 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=4418a689" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+
+    <script src="_static/documentation_options.js?v=e1a75a79"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'devtools';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Instruments" href="instruments/index.html" />
+    <link rel="prev" title="Documentation" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="CHIL Documentation 0.1 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="CHIL Documentation 0.1 documentation - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Home</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Software setup</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="instruments/index.html">Instruments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="instruments/cryoegg/index.html">Cryoegg</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="instruments/cryoegg/assembly.html">Assembly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="instruments/cryoegg/firmware.html">Firmware and programming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="instruments/cryoegg/deployment.html">Deployment</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="instruments/cryowurst/index.html">Cryowurst</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="instruments/cryowurst/assembly.html">Assembly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="instruments/cryowurst/firmware.html">Firmware and programming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="instruments/cryowurst/deployment.html">Deployment</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="datalogger/index.html">Datalogger</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="datalogger/assembly/index.html">Mechanical assembly</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="datalogger/assembly/tripod.html">Tripod datalogger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="datalogger/assembly/portable.html">Portable datalogger</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="datalogger/2023/index.html">2023 version</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="datalogger/2023/hardware.html">Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="datalogger/2023/firmware.html">Firmware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="datalogger/2023/servicing.html">Servicing</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="datalogger/2026/index.html">2026 version</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="datalogger/2026/hardware.html">Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="datalogger/2026/firmware.html">Firmware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="datalogger/2026/configuration.html">SD card configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="datalogger/2026/servicing.html">Servicing</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="deployment/index.html">Deployment</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="deployment/cryoegg.html">Cryoegg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment/cryowurst.html">Cryoegg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment/datalogger.html">Datalogger</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/devtools.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Development environment</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-steps">Installation steps</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-installation-files">Download installation files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-vs-code">Install VS Code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-platformio">Install PlatformIO</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-datalogger-firmware">Install datalogger firmware</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-stm32cubeide">Install STM32CubeIDE</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-stm32cubeide-environment">Setup STM32CubeIDE environment</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#add-chillib-library">Add <cite>chillib</cite> library</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#add-cryoegg-2025-library">Add <cite>cryoegg-2025</cite> library</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-python-3-14">Install Python 3.14</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references-and-links">References and links</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#third-party-software">Third-party software</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#firmware-and-software">Firmware and software</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="development-environment">
+<h1>Development environment<a class="headerlink" href="#development-environment" title="Link to this heading">#</a></h1>
+<p>Various code repositories and third-party software packages are required to update the firmware on CHIL instruments and dataloggers, as well as receive and decode the packets that they transmit.</p>
+<p>This page describes instructions for setting up a development environment on a Windows PC so that you can:</p>
+<ul class="simple">
+<li><p>reprogram CHIL instruments with new measurement settings</p></li>
+<li><p>update firmware on CHIL dataloggers to the latest version</p></li>
+<li><p>decode and interpret packets from CHIL instruments and dataloggers</p></li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Follow the instructions carefully, <strong>do not use</strong> default options for all the installation steps!</p>
+</div>
+<section id="installation-steps">
+<h2>Installation steps<a class="headerlink" href="#installation-steps" title="Link to this heading">#</a></h2>
+<p>The installation instructions below were tested on 2026-05-21 using a Windows laptop without a internet connection. If you find any issues with the instructions below, let us know by <a class="reference external" href="mailto:hawkinsj22&#37;&#52;&#48;cardiff&#46;ac&#46;uk">sending an email</a>.</p>
+<p>The latest files for the development environment are stored in a ZIP archive (<code class="docutils literal notranslate"><span class="pre">childev.zip</span></code>).</p>
+<p><strong>Archive folder structure:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">firmware/</span></code> instrument and datalogger firmware.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">installers/</span></code> third-party software installers.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">software/</span></code> CHIL developed software and Python libraries.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vscode_extensions/</span></code> useful extensions for Visual Studio Code.</p></li>
+</ul>
+<section id="download-installation-files">
+<h3>Download installation files<a class="headerlink" href="#download-installation-files" title="Link to this heading">#</a></h3>
+<p>If you have an offline version of the  <code class="docutils literal notranslate"><span class="pre">childev.zip</span></code> archive (<code class="docutils literal notranslate"><span class="pre">childev-offline.zip</span></code>), this should already contain the necessary files to setup the environment. For licensing reasons, we cannot host the full archive online because of the use of third-party software.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Before starting the installation process, download third-party software installers <a class="reference internal" href="#third-party-software"><span class="std std-ref">listed below</span></a> and copy them to the <cite>installers</cite> directory in your <cite>childev</cite> folder.</p>
+<p>Key installers to ensure you have downloaded are <strong>VS Code</strong>, <strong>STM32CubeIDE</strong> and <strong>Python 3.14</strong>.</p>
+</div>
+<p>We recommend keeping local copies of the offline installers on your machine, a hard drive or USB flash drive in case you need to reset your development environment while in the field.</p>
+</section>
+<section id="install-vs-code">
+<h3>Install VS Code<a class="headerlink" href="#install-vs-code" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Located in <cite>childev/installers</cite>, run <cite>VSCodeUserSetup-x64-1.121.0.exe</cite>.</p></li>
+<li><p>Select “I accept the agreement” on the following splash screen and install the software to the default location.</p></li>
+<li><p>Ensure that “Add to PATH” is selected and optionally select to create a desktop icon.</p></li>
+</ol>
+</section>
+<section id="install-platformio">
+<h3>Install PlatformIO<a class="headerlink" href="#install-platformio" title="Link to this heading">#</a></h3>
+<ol class="arabic">
+<li><p>Open VS Code and open the “Extensions” menu (<cite>View &gt; Extensions</cite> from the top menu bar).</p></li>
+<li><p>Select the <cite>Install from VSIX</cite> option from the three dots (<cite>…</cite>) menu at the top of the extensions screen. Navgiate to the <cite>childev/vscode_extensions</cite> folder and install the following extensions</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>VS Code cpptools: <cite>ms-vscode.cpptools-1.32.2-win32-x64.vsix</cite></p></li>
+<li><p>VS Code cpptools extension: <cite>ms-vscode.cpptools-extension-pack-1.5.1.vsix</cite></p></li>
+<li><p>VS Code cpp-devtools: <cite>ms-vscode.cpp-devtools-0.5.13.vsix</cite></p></li>
+<li><p>VS Code cmake-tools: <cite>ms-vscode.cmake-tools-1.23.52.vsix</cite></p></li>
+<li><p>PlatformIO: <cite>platformio.platformio-ide-3.3.4-win32-x64.vsix</cite></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Extract the contents of <cite>.platformio.zip</cite> folder from <cite>childev/installers</cite> to <cite>C:/Users/[username]/.platformio</cite> - make sure you don’t end up with a nested folder (i.e. <cite>.platformio/.platformio/…</cite>). This is a large ZIP archive so might take some time!</p></li>
+<li><p>Restart your PC.</p></li>
+</ol>
+</section>
+<section id="install-datalogger-firmware">
+<h3>Install datalogger firmware<a class="headerlink" href="#install-datalogger-firmware" title="Link to this heading">#</a></h3>
+<p>I recommend setting up a folder for GitHub repositories (either <cite>C:/repos</cite> or <cite>C:/Users/{username}/repos</cite>). From here on, the ‘repos’ folder refers to whichever of these two options you’ve used!</p>
+<p>For CHIL repositories, I recommend storing these in a folder named <cite>chil</cite> within your <cite>repos</cite> folder.</p>
+<ol class="arabic simple">
+<li><p>Extract the datalogger firmware <cite>childev/firmware/datalogger-2023-main.zip</cite> to <cite>repos/chil/datalogger-2023</cite> (<strong>Note:</strong> <cite>-main</cite> has been dropped from the end of the new folder). Again, double check that you haven’t nested any folders.</p></li>
+<li><p>Extract the <cite>chillib-v20260521</cite> library to <cite>repos/chil/chillib</cite>, removing the trailing <cite>-v20260521</cite> from the folder name.</p></li>
+<li><p>Open VS Code and open the <cite>repos/chil/datalogger-2023</cite> folder. If prompted to trust the authors of the repository, confirm that you trust us!</p></li>
+<li><p>Press <cite>CTRL+SHIFT+P</cite>, type in <cite>PlatformIO: Build</cite> to the text box at the top of the screen and press enter. This will compile the Datalogger firmware. An output terminal should appear at the bottom of the screen and show a <cite>[SUCCESS]</cite> message - this might take a while the first time you run the build command.</p></li>
+<li><p>If you have a datalogger board (or just the Arduino Feather M0) to hand, plug it into the USB connection of the laptop, press <cite>CTRL+SHIFT+P</cite> and type <cite>PlatformIO: Upload</cite>. Press enter and the firmware should be uploaded to the datalogger.</p></li>
+</ol>
+</section>
+<section id="install-stm32cubeide">
+<h3>Install STM32CubeIDE<a class="headerlink" href="#install-stm32cubeide" title="Link to this heading">#</a></h3>
+<p>You will need to use STM32CubeIDE to program CHIL instruments which use the STM32L4 series of microcontrollers - this includes Cryoeggs, Cryowurst, Cryobeans, SmartSnowStake, etc.</p>
+<ol class="arabic simple">
+<li><p>Unzip the installer located with <cite>st-stm32cubeide_2.1.1_28236_20260312_0043_x86_64.exe.zip</cite> to a location of your choice.</p></li>
+<li><p>Run the installer file (<cite>st-stm32cubeide_2.1.1_28236_20260312_0043_x86_64.exe</cite>).</p></li>
+<li><p>If prompted to install any drivers (i.e. for ST-LINK) then do so.</p></li>
+<li><p>Launch the STM32CubeIDE software. When prompted to select a directory as a workspace update the filepath to <cite>C:/Users/sgljh3/STM32CubeIDE/chil</cite> and select <cite>Launch</cite>.</p></li>
+</ol>
+<p>When STM32CubeIDE has loaded, you’re ready to setup the development environment for a CHIL instrument.</p>
+</section>
+<section id="setup-stm32cubeide-environment">
+<h3>Setup STM32CubeIDE environment<a class="headerlink" href="#setup-stm32cubeide-environment" title="Link to this heading">#</a></h3>
+<p>Within the <cite>chil</cite> workspace you have just created in STM32CubeIDE (see previous step!), we can import the firmware libraries for CHIL instrumentation.</p>
+<section id="add-chillib-library">
+<h4>Add <cite>chillib</cite> library<a class="headerlink" href="#add-chillib-library" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Select File &gt; Import…. A dialog box will open. Choose the option General &gt; Existing Projects into Workspace and press <cite>Next &gt;</cite>.</p></li>
+<li><p>Browse for the <cite>chillib</cite> folder in <cite>repos/chil/chillib</cite> and select it as the root directory. If succesful, you should see a project named ‘chillib’ in the Projects window. Press <cite>Finish</cite>.</p></li>
+</ol>
+</section>
+<section id="add-cryoegg-2025-library">
+<h4>Add <cite>cryoegg-2025</cite> library<a class="headerlink" href="#add-cryoegg-2025-library" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Extract <cite>childev/firmware/cryoegg-2025-v20260521</cite> to <cite>repos/chil/cryoegg-2025</cite>. Ensure that there are no nested folders and that you’ve removed the trailing <cite>-v20260521</cite> from the folder name.</p></li>
+<li><p>Select File &gt; Import… and the option General &gt; Existing Projects into Workspace then press <cite>Next &gt;</cite>.</p></li>
+<li><p>Set the root directory as <cite>repos/chil/cryoegg-2025/firmware/cryoegg-2025</cite>.</p></li>
+<li><p>If the <cite>cryoegg-2025</cite> project shows up in the Projects folder, press <cite>Finish</cite>.</p></li>
+</ol>
+<p>You should now be able to build and debug the Cryoegg.</p>
+</section>
+</section>
+<section id="install-python-3-14">
+<h3>Install Python 3.14<a class="headerlink" href="#install-python-3-14" title="Link to this heading">#</a></h3>
+<p>Run the installer <cite>python-3.14.5-amd64.exe</cite> located in <cite>childev/installers/</cite>.</p>
+<ol class="arabic simple">
+<li><p>Select <strong>Customize installation</strong> and “Add python.exe to PATH” before proceeding.</p></li>
+<li><p>On the Optional Features menu, ensure all options are selected except for “for all users”.</p></li>
+<li><p>On the Advanced Options menu:</p>
+<ul class="simple">
+<li><p>Install Python 3.14 for all users [✓]</p></li>
+<li><p>Associated files with Python [✓]</p></li>
+<li><p>Create shorcuts for installed applications [✓]</p></li>
+<li><p>Add Python to environment variables [✓]</p></li>
+<li><p>Modify the install location to <cite>C:/python/python314/</cite>.</p></li>
+</ul>
+</li>
+<li><p>Press install and wait for the installation to complete.</p></li>
+</ol>
+</section>
+</section>
+<section id="references-and-links">
+<h2>References and links<a class="headerlink" href="#references-and-links" title="Link to this heading">#</a></h2>
+<section id="third-party-software">
+<span id="id1"></span><h3>Third-party software<a class="headerlink" href="#third-party-software" title="Link to this heading">#</a></h3>
+<p>The various third-party software tools that make up the development and deployment environment for CHIL isntruments and dataloggers are listed below.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Used for</p></th>
+<th class="head"><p>Version</p></th>
+<th class="head"><p>URL</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>VS Code</strong></p></td>
+<td><p>Text editor and development environment CHIL datalogger firmware.</p></td>
+<td><p>v1.121.0</p></td>
+<td><p><a class="reference external" href="https://code.visualstudio.com/updates/v1_121">Download</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Python</strong></p></td>
+<td><p>Programming environment for CHIL packet decoding software.</p></td>
+<td><p>v3.14.0+</p></td>
+<td><p><a class="reference external" href="https://www.python.org/downloads/release/python-3140/">Download</a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>STM32CubeIDE</strong></p></td>
+<td><p>STM32 microcontroller development environment for instrument firmware.</p></td>
+<td><p>v2.1.1</p></td>
+<td><p><a class="reference external" href="https://community.st.com/stm32cubeide-mcus-28/stm32cubeide-2-1-1-released-163841">Download (login required)</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Radiocrafts RCTools</strong></p></td>
+<td><p>Programming radio module IDs and debugging.</p></td>
+<td><p>v1.98</p></td>
+<td><p><a class="reference external" href="https://radiocrafts.com/resources/supporting-software-and-software-tools/#wirelessmbusrctools">Download (login required)</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="firmware-and-software">
+<span id="firmware"></span><h3>Firmware and software<a class="headerlink" href="#firmware-and-software" title="Link to this heading">#</a></h3>
+<p>GitHub is used to store and provide version control for CHIL instrument and datalogger firmware, as the <a class="reference external" href="https://chilcardiff.github.io/cryodecoder/">cryodecoder</a> Python library which is used to decode packets.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Library name</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Release</p></th>
+<th class="head"><p>URL</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>chillib</p></td>
+<td><p>Shared firmware library</p></td>
+<td><p>v20260521</p></td>
+<td><p><a class="github reference external" href="https://github.com/CHILCardiff/chillib/tree/v20260521">CHILCardiff/chillib</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>cryoegg-2025</p></td>
+<td><p>Cryoegg firmware and design files</p></td>
+<td><p>v20260521</p></td>
+<td><p><a class="github reference external" href="https://github.com/CHILCardiff/cryoegg-2025/tree/v20260521">CHILCardiff/cryoegg-2025</a></p></td>
+</tr>
+<tr class="row-even"><td><p>cryowurst-2026</p></td>
+<td><p>Cryowurst firmware and design files</p></td>
+<td><p>N/A</p></td>
+<td><p><a class="github reference external" href="https://github.com/CHILCardiff/cryowurst-2026/">CHILCardiff/cryowurst-2026</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>cryodecoder</p></td>
+<td><p>Python package and CLI interface to decode CHIL packets</p></td>
+<td><p>N/A</p></td>
+<td><p><a class="github reference external" href="https://github.com/CHILCardiff/cryodecoder/">CHILCardiff/cryodecoder</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Documentation</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="instruments/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Instruments</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-steps">Installation steps</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-installation-files">Download installation files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-vs-code">Install VS Code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-platformio">Install PlatformIO</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-datalogger-firmware">Install datalogger firmware</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-stm32cubeide">Install STM32CubeIDE</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-stm32cubeide-environment">Setup STM32CubeIDE environment</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#add-chillib-library">Add <cite>chillib</cite> library</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#add-cryoegg-2025-library">Add <cite>cryoegg-2025</cite> library</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-python-3-14">Install Python 3.14</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references-and-links">References and links</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#third-party-software">Third-party software</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#firmware-and-software">Firmware and software</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By M. R. Prior-Jones, L. Craw, J. D. Hawkins, S. F. Mann, J. Saade
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, M. R. Prior-Jones, L. Craw, J. D. Hawkins, S. F. Mann, J. Saade.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
