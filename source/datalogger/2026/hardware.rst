@@ -68,7 +68,7 @@ Wire the RockBLOCK to the PCB as shown in figure x. Wire colours are as follows:
    </p>
 
 
-.. _fig-datalogger_rockblock:
+.. _fig-datalogger_rockblock_2026:
 
 .. figure:: datalogger_pcb_rockblock.png
    :align: center
