@@ -99,7 +99,22 @@ The following steps assume you have set up your the CHIL development environment
 
     Output from Cryowurst in the SWV ITM Data Console.
 
-You have now succesfully programmed the Cryowurst for deployment.
+You have now succesfully programmed the Cryowurst for deployment. We recommend powering off the instrument and restarting it without the programming cable inserted before deployment.
+
+.. tip::
+
+    It is possible to reset the number of deployment packets when programming the Cryowurst by following the steps below.
+
+    1. Insert a breakpoint (right-click line number and select *Toggle Breakpoint*) below the line in ``main()`` where ``chil_instrument_init(&cyrowurst, &hrtc)`` is called.
+
+     .. image:: /_static/img/cryowurst/programming/breakpoint_deployment.png
+
+    2. Run the program until this breakpoint is activated.
+    3. Hover the mouse cursor over ``&cryowurst`` until the variable dialog window is shown. Double click the value of ``deployment_packets`` and set it to the new value.
+        
+     .. image:: /_static/img/cryowurst/programming/modify_variable.png
+
+    4. Continue to run the program until the Cryowurst enters sleep mode so that the new ``deployment_packets`` value is saved.
 
 .. _serial_wire_viewer_setup:
 
