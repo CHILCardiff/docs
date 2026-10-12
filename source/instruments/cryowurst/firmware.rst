@@ -101,6 +101,8 @@ The following steps assume you have set up your the CHIL development environment
 
 You have now succesfully programmed the Cryowurst for deployment. We recommend powering off the instrument and restarting it without the programming cable inserted before deployment.
 
+.. _tip_deployment_packets:
+
 .. tip::
 
     It is possible to reset the number of deployment packets when programming the Cryowurst by following the steps below.

@@ -7,4 +7,3 @@ Cryowurst
 
    assembly
    firmware
-   deployment

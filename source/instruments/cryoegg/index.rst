@@ -18,4 +18,3 @@ This section of the documentation describes the steps required to assembly and p
 
    assembly
    firmware
-   deployment

@@ -12,8 +12,8 @@ This documentation describes the **capabilities** of each instrument, how to **a
    :maxdepth: 2
    :caption: Instruments:
 
-   cryoegg/index
    cryowurst/index
+   cryoegg/index
 
 Overview
 --------

@@ -117,8 +117,8 @@ Run the installer `python-3.14.5-amd64.exe` located in `childev/installers/`.
 
 4. Press install and wait for the installation to complete.
 
-References and links
---------------------
+Third-party software and instrument firmware
+--------------------------------------------
 
 .. _third-party-software:
 
