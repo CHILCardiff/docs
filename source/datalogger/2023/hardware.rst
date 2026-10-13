@@ -6,10 +6,12 @@ Equipment
 
 * CHIL datalogger PCB (old version, with modboard and jumpers)
 * screws to attach PB to baseplate
-* RockBLOCK+ satellite modem
+* `RockBLOCK+`_ satellite modem
 * thumbscrews for attaching modem
 * multimeter
 * pink loctite
+
+.. _RockBLOCK+: https://www.groundcontrol.com/product/rockblock-plus-waterproof-satellite-iot-device/
 
 Assembly
 

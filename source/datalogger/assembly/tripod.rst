@@ -45,8 +45,8 @@ The first time a datalogger is assembled, it can be quite difficult to get all o
 
 .. _fig-tripod_assembled:
 
-.. figure:: datalogger_2025_danzhur.jpg
+.. figure:: /_static/img/datalogger/datalogger_2025_danzhur.jpg
    :align: center
    :width: 40%
 
-   **Figure 1:** Tripod set up on Dän Zhùr in 2025.
+   Tripod set up on Dän Zhùr in 2025.

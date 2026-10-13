@@ -1,18 +1,19 @@
-#,Name,Part Number,Manufacturer
-a.,Upper PCB,CE25_120mm_upper,CHIL
-b.,Lower PCB,CE25_120mm_lower,CHIL
-c.,O-ring,,
-d.,Jumpers for radio modem,,
-e.,Eyelet,,
-f.,EC sensor self sealing bolts,,
-g.,EC sensor nuts (M3),,
-h.,EC sensor washers (M3),,
-i.,EC sensor tail,,
-j.,PCB mounting screws (M3),,
-k.,Upper PCB mounting standoffs (M3),,
-l.,Lower PCB mounting standoffs (M3) ,,
-m.,Casework lid bolts (M4),,
-n.,Flange securing bolts (M4),,
-o.,Pressure sensor flange,,
-p.,Keller pressure sensor,,
-q.,Antenna,,
+No.,Name,Part Number,Manufacturer,Generic
+a.,Upper PCB,CE25_120mm_upper,CHIL,No
+b.,Lower PCB,CE25_120mm_lower,CHIL,No
+c.,O-ring (330mm ID x 3mm CS Nitrile Black 70 ShA),P3x3N70,Polymax,No
+d.,2.54mm jumper,MC-2228BG,MULTICOMP PRO,Yes
+e.,M4x15mm lifting eye,828088,Rapid Toolcraft,Yes
+f.,M3x20mm self-sealing bolts,P0170.030-020-SI,Automotion components,No
+g.,M3 nut,,Yes (DIN 934)
+h.,M3 shakeproof washer,HLW-M3-A2,Accu,Yes (DIN 6797A)
+i.1,M3 ring terminal,RNB1-3.2,MULTICOMP PRO,Yes
+i.2,EC sensor tail,15133-0206,Molex,No
+j.,M3x6mm screws (pan head),SFP-M3-6-A2,Accu,Yes (DIN 85)
+k.,M3 nylon PCB spacer (6mm thread & 8mm body),D01495,Duratool,Yes
+l.,M3 vibration dampening FC standoff,M3-VB,Matek
+m.,M4x16mm socket cap screw,SSCF-M4-16-A2,Accu,Yes (DIN 912)
+n.,M4x8mm socket cap screw,SSB-M4-8-A2,Accu,Yes (ISO 7380-1)
+o.,Pressure sensor flange,cryoegg_2025_flange_7LD or cryoegg_2025_flange_7LHPD,CHIL,No
+p.,Keller pressure sensor,PA-7LD or PA-7LHPD,Keller,No
+q.,Antenna,WSMA-400,Watson,No

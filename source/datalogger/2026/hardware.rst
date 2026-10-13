@@ -5,13 +5,15 @@ Equipment
 ~~~~~~~~~
 
 * CHIL datalogger PCB (2026 version)
-* plastic adhesive spacers to mount PCB
-* RockBLOCK+ satellite modem
-* thumbscrews for attaching modem
-* multimeter
-* pink loctite
+* `RockBLOCK+`_ satellite modem
+* Thumbscrews for attaching modem
+* Digital multimeter
+* Loctite 222 (Pink)
+
+.. _RockBLOCK+: https://www.groundcontrol.com/product/rockblock-plus-waterproof-satellite-iot-device/
 
 Assembly
+~~~~~~~~
 
 Before going into the field, it's a good idea to set up and test the system in advance, somewhere where you have access to the internet and potentially a workshop for last-minute tweaks.
 
@@ -70,8 +72,8 @@ Wire the RockBLOCK to the PCB as shown in figure x. Wire colours are as follows:
 
 .. _fig-datalogger_rockblock_2026:
 
-.. figure:: datalogger_pcb_rockblock.png
-   :align: center
-   :width: 40%
+.. .. figure:: datalogger_pcb_rockblock.png
+..    :align: center
+..    :width: 40%
 
-   RockBLOCK cable wired into datalogger PCB
+..    Connection for RockBLOCK modem to datalogger PCB (v2026).

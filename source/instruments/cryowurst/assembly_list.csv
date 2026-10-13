@@ -1,18 +1,18 @@
-#,Name,Part Number,Manufacturer
+No.,Name,Part Number,Manufacturer
 a.,Motherboard PCB,CW26_motherboard and CW26_groundplane,CHIL
 b.,Sensorboard PCB,CW26_sensorboard,CHIL
 c.,Tilt sensor,TILT-05,CTi Sensors
-d.,Tilt sensor bracket,,
-e.,,,
-f.,,,
-g.,,,
-h.,,,
-i.,M6 self sealing bolt,,Automotion components
-j.,M6 nut,,
-k.,M6 nylon nut,,
-l.,M6 washer (?mm),,
-m.,2.54mm jumper,
-n.,Antenna,WSMA,Watson
-o.,O-ring,,
-p.,M4 bolt sensor cap,,
+d.,Tilt sensor bracket,``tilt_bracket.step``,CHIL [1]
+e.,M3x12mm screw,SFP-M3-12-A2,Accu
+f.,M3 nut (2.4mm height),HPN-M3-A2,Accu
+g.,M2x10mm SEMS screw,NBK-SNPI3S-M2-12,Accu
+h.,M2 nut,HPN-M2-A2,Accu
+i.,M6x50 self sealing screw (pan head),P0170.060-050-SI,Automotion components
+j.,M6 nut,HPN-M6-A2,Accu
+k.,M6 nylon washer (1.6mm),HPW-6.4-12.5-1.6-N,Accu
+l.,M6 washer (1.6mm),HRDW-M6-A2,Accu
+m.,2.54mm jumper,MC-2228BG,MULTICOMP PRO
+n.,Antenna,WSMA-450,Watson
+o.,O-ring (50mm ID x 3.5mm CS Nitrile Black 70 ShA) ,50X3.5N70,Polymax
+p.,M4x16mm hex socket cap screw,SSCF-M4-16-A2,Accu
 q.,Battery,TL-6903,Tadiran

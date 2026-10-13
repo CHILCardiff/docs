@@ -5,10 +5,18 @@ Components
 ----------
 .. image:: /_static/img/cryowurst/assembly/cryowurst_parts.png
 
+.. note::
+
+    The list below is not a comprehensive bill of materials (BOM) for Cryowurst and instead is intended to be used during the instrument assembly process, please refer to the `GitHub repository <https://github.com/chilcardiff/cryowurst-2026>`__ for the complete BOM.
+
 .. csv-table:: Common Cryowurst (2026) assembly components.
     :widths: auto
     :header-rows: 1
     :file: assembly_list.csv
+
+.. rubric:: Footnotes
+
+.. [#] To be 3D printed in PLA with from an external supplier.
 
 .. note::
 
@@ -42,7 +50,7 @@ Assembly steps
 ^^^^^^^^^^^^^^^^
 .. figure:: /_static/img/cryowurst/assembly/sensorboard.png
 
-    Figure 2. Assembly instructions for Cryowurst sensorboard.
+    Assembly instructions for Cryowurst sensorboard.
 
 **Parts required**: (i., j., k., l. b.)
 
@@ -55,7 +63,7 @@ Assembly steps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. figure:: /_static/img/cryowurst/assembly/tilt_sensor.png
 
-    Figure 3. Assembly instructions for external CTi TILT-05 sensor.
+    Assembly instructions for external CTi TILT-05 sensor.
 
 **Parts required**: (c., d., e., f., g., h.)
 
@@ -69,7 +77,7 @@ Assembly steps
 ^^^^^^^^^^^^^^^
 .. figure:: /_static/img/cryowurst/assembly/radio_module.png
 
-    Figure 4. Assembly instructions for radio module parts.
+    Assembly instructions for radio module parts.
 
 **Parts required**: (m.)
 
@@ -80,7 +88,7 @@ Assembly steps
 ^^^^^^^^^^^^^^^^^^^^^^
 .. figure:: /_static/img/cryowurst/assembly/batteries.png
 
-    Figure 5. Assembly instructions for batteries and casework.
+    Assembly instructions for batteries and casework.
 
 1. Insert the motherboard **[a]** vertically on to the 10-pin connector on the sensorboard **[b]**.
 2. Place the 1 to 3 of the Tadiran batteries **[q]** in the battery holders.

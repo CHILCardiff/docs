@@ -1,5 +1,5 @@
 Cryoegg
-=======
+-------
 
 The Cryoegg wireless instrument is a 120mm sphere with temperature, conductivity, pressure and orientation sensing capabilities. The internal electronics are composed of an upper and lower board which implement the logic and power management, respectively.
 
