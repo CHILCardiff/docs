@@ -8,3 +8,4 @@ Deployment
    cryoegg
    cryowurst
    datalogger
+   cloudloop

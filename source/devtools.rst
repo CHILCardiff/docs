@@ -181,3 +181,8 @@ GitHub is used to store and provide version control for CHIL instrument and data
     - Python package and CLI interface to decode CHIL packets
     - N/A
     - https://github.com/CHILCardiff/cryodecoder/
+
+.. toctree::
+  :hidden:
+
+  Arduino IDE (archive) <devtools-2023>
