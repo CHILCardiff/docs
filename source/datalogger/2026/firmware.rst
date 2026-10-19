@@ -12,9 +12,9 @@ To begin, open the datalogger case and connect the datalogger to a computer with
 
 .. _fig_datalogger_usb_connection:
 
-.. figure:: ./png
+.. .. figure:: ./png
 
-    Connect the datalogger to the PC with a USB Type A to USB Micro cable.
+..     Connect the datalogger to the PC with a USB Type A to USB Micro cable.
 
 Open the ``datalogger-firmware-2026`` folder in Visual Studio Code. Once PlatformIO has finished initialising, select the serial port associated with the datalogger by pressing ``CTRL + SHIFT + P`` and typing ``Set Project Port``.
 

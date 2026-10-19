@@ -15,4 +15,5 @@ This document compiles information on how to assembly, service and deploy CHIL i
    Software setup <devtools>
    instruments/index
    datalogger/index
+   deployment/packet_decoder
    deployment/index

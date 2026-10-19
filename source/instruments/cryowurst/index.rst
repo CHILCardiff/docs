@@ -10,7 +10,7 @@ This section of the documentation describes the steps required to assemble and p
    Design files and firmware for the Cryowurst sensor are located in the `cryowurst-2026`_ GitHub repository.
 
 
-.. _cryowurst-2025: https://github.com/chilcardiff/cryowurst-2026
+.. _cryowurst-2026: https://github.com/chilcardiff/cryowurst-2026
 
 .. toctree::
    :maxdepth: 2
