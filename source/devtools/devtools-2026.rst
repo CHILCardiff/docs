@@ -21,12 +21,22 @@ The installation instructions below were tested on 2026-05-21 using a Windows la
 
 The latest files for the development environment are stored in a ZIP archive (``childev.zip``).
 
-**Archive folder structure:**
+Folder structure
+^^^^^^^^^^^^^^^^
 
-* ``firmware/`` instrument and datalogger firmware.
+*   ``firmware/`` instrument and datalogger firmware.
+
+    *   ``2023/`` 2023 firmware.
+
+        *   ``Arduino/`` Arduino versions of datalogger firmware.
+        *   ``PlatformIO/`` PlatformIO versions of datalogger firmware.
+
+    *   ``2026/`` 2026 firmware.
+
 * ``installers/`` third-party software installers.
 * ``software/`` CHIL developed software and Python libraries.
 * ``vscode_extensions/`` useful extensions for Visual Studio Code.
+* ``wheels/`` Python wheels for installing modules offline.
 
 Download installation files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
