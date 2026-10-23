@@ -40,6 +40,14 @@ The instruments are designed around an `STM32L433`_ microcontroller and use an `
 
 .. _RC1701HP-MBUS4: https://radiocrafts.com/products/wirelessmbus/#wireless-mbus-products
 
+Measurement intervals and battery life
+--------------------------------------
+The minimum measurement interval is determined by the time period the instrument takes to make each set of measurements and transmit the radio packet; this is typically between 3 to 5 seconds. There is a proportional relationship between measurement interval and battery life: the longer the *sleep* period between each measurement, the longer the battery will last. 
+
+With half-hourly measurements, a Cryoegg will typically last 12 to 18 months. For the same measurement interval, Cryowurst have a larger battery capacity and are intended for longer term deployments of 5 to 10 years. 
+
+Some deployments of the Cryoegg using the instrument as a retrievable englacial sonde and require fast measurement intervals of 10 to 30 seconds. In these cases, it is possible to replace the single-use Tadiran LTC battery with a rechargeable Lithium Ion battery.
+
 Sensors
 -------
 

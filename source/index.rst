@@ -12,7 +12,7 @@ This document compiles information on how to assembly, service and deploy CHIL i
    :caption: Contents:
    
    Home <self>
-   Software setup <devtools>
+   Software setup <devtools/devtools-2026>
    instruments/index
    datalogger/index
    deployment/packet_decoder

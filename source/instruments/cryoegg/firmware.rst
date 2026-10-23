@@ -1,3 +1,5 @@
+.. _firmware_cryoegg:
+
 Firmware and programming
 ========================
 
