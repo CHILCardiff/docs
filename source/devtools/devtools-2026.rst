@@ -90,7 +90,7 @@ Run the installer `python-3.14.5-amd64.exe` located in `childev/installers/`.
 
 #. Press install and wait for the installation to complete.
 
-.. figure:: /_static/img/setup/python_python_complete.png
+.. figure:: /_static/img/setup/python_complete.png
 
     Successful installation of Python 3.14.
 
@@ -186,6 +186,10 @@ Install PlatformIO
 Install datalogger firmware
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 In the example below, the 2026 firmware is setup (`datalogger-firmware-2026-*`). If you are using the older (2023) version of the datalogger, complete the same steps for `datalogger-2023-cryoegg` or `datalogger-2023-cryowurst`.
+
+.. note:: 
+
+    Alternative versions of the datalogger firmware for Arduino IDE are available in the ``datalogger-2023-*-arduino`` folders. Follow the instructions :ref:`here <devenvarduino>`.
 
 1. Extract the contents of the datalogger firmware `firmware/datalogger-firmware-2026-*` to `C:/chil/datalogger-firmware-2026-*`. Double check that you haven't nested any folders - firmware folder should contain the ``data/``, ``lib/`` and ``src/`` folders.
 2. Extract the contents of `firmware/chillib-*` library to `C:/chil/chillib-*`. As above, check to avoid nested folders.

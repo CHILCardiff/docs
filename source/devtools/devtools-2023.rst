@@ -119,19 +119,3 @@ If you have the datalogger board available, connect the USB cable to the Adafrui
         // }
 
     Once you have done this, try recompiling ('verifying') and uploading the firmware to the datalogger and check that you are receiving data from channel 2. If not, there may be another problem.
-
-Python (3.14+) 
-==============
-Run the installer `python-3.14.5-amd64.exe` located in `childev/installers/`.
-
-1. Select **Customize installation** and "Add python.exe to PATH" before proceeding.
-2. On the Optional Features menu, ensure all options are selected except for "for all users".
-3. On the Advanced Options menu:
-
-   * Install Python 3.14 for all users [✓]
-   * Associated files with Python [✓]
-   * Create shorcuts for installed applications [✓]
-   * Add Python to environment variables [✓]
-   * Modify the install location to `C:/python/python314/`.
-
-4. Press install and wait for the installation to complete.
