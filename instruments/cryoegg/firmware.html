@@ -1,0 +1,656 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Firmware and programming &#8212; CHIL Documentation 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=4418a689" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+
+    <script src="../../_static/documentation_options.js?v=e1a75a79"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'instruments/cryoegg/firmware';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Radio modem configuration" href="../radio_config.html" />
+    <link rel="prev" title="Assembly" href="assembly.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../../_static/searchtools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="CHIL Documentation 0.1 documentation - Home"/>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="CHIL Documentation 0.1 documentation - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Home</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../devtools/devtools-2026.html">Software setup</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../devtools/devtools-2023.html">Arduino IDE (archive)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Instruments</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../overview.html">Overview</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../cryowurst/index.html">Cryowurst</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../cryowurst/assembly.html">Assembly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cryowurst/firmware.html">Firmware and programming</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="index.html">Cryoegg</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="assembly.html">Assembly</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Firmware and programming</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../radio_config.html">Radio configuration</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../datalogger/index.html">Datalogger</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../datalogger/assembly/index.html">Mechanical assembly</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../datalogger/assembly/tripod.html">Tripod datalogger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../datalogger/assembly/portable.html">Portable datalogger</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../datalogger/2023/index.html">2023 version</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../datalogger/2023/hardware.html">Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../datalogger/2023/firmware.html">Firmware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../datalogger/2023/servicing.html">Servicing</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../datalogger/2026/index.html">2026 version</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../datalogger/2026/hardware.html">Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../datalogger/2026/firmware.html">Firmware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../datalogger/2026/configuration.html">SD card configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../datalogger/2026/servicing.html">Servicing</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../deployment/packet_decoder.html">Packet decoders</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../deployment/packet_decoder/cryodecoder.html">Cryodecoder (2026)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../deployment/packet_decoder/cryoegg_2023.html">Cryoegg decoder (2023)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../deployment/packet_decoder/cryowurst_2023.html">Cryowurst decoder (2023)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../deployment/index.html">Deployment</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../deployment/cryoegg.html">Cryoegg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../deployment/cryowurst.html">Cryoegg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../deployment/datalogger.html">Datalogger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../deployment/cloudloop.html">Satellite data (Cloudloop)</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/instruments/cryoegg/firmware.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Firmware and programming</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#firmware">Firmware</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#programming-using-stm32cubeide">Programming using STM32CubeIDE</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equipment">Equipment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#steps">Steps</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="firmware-and-programming">
+<span id="firmware-cryoegg"></span><h1>Firmware and programming<a class="headerlink" href="#firmware-and-programming" title="Link to this heading">#</a></h1>
+<section id="firmware">
+<h2>Firmware<a class="headerlink" href="#firmware" title="Link to this heading">#</a></h2>
+<p>The latest source code for the Cryoegg firmware is stored on GitHub here: <a class="github reference external" href="https://github.com/CHILCardiff/cryoegg-2026/">CHILCardiff/cryoegg-2026</a>. At present, we do not provide pre-compiled <code class="docutils literal notranslate"><span class="pre">.elf</span></code> files to program the instrument using <em>STM32CubeProgrammer</em> or similar binary flashing tools.</p>
+<p>You should already have downloaded the latest version of the firmware for Cryoegg when <a class="reference internal" href="../../devtools/devtools-2026.html#devenv"><span class="std std-ref">setting up your CHIL development environment</span></a>.</p>
+</section>
+<section id="programming-using-stm32cubeide">
+<h2>Programming using STM32CubeIDE<a class="headerlink" href="#programming-using-stm32cubeide" title="Link to this heading">#</a></h2>
+<p>The following section describes the equipment required and necessary steps to program the Cryoegg sensor. Programming the sensor allows the user to change the measurement interval, number of deployment packets and radio packet version used.</p>
+<section id="equipment">
+<h3>Equipment<a class="headerlink" href="#equipment" title="Link to this heading">#</a></h3>
+<p>To program the Cryoegg, you will need the items shown below in addition to an assembled Cryoegg motherboard, power switch and batteries.</p>
+<ol class="loweralpha simple">
+<li><p>STMicroelectronics <a class="reference external" href="https://www.st.com/en/evaluation-tools/nucleo-l476rg.html">Nucleo-L476RG</a> development board.</p></li>
+<li><p>USB-A to Micro-USB or Mini-USB cable (check board type).</p></li>
+<li><p>6-way 2.54mm header cable.</p></li>
+</ol>
+</section>
+<section id="steps">
+<h3>Steps<a class="headerlink" href="#steps" title="Link to this heading">#</a></h3>
+<figure class="align-default" id="id1">
+<span id="fig-ceprogramming-cryoegg"></span><img alt="../../_images/programming.png" src="../../_images/programming.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 47 </span><span class="caption-text">Connecting the Cryoegg (2026) to the STLINK-V3 programmer.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple">
+<li><p>Connect the Nucleo development board to to your PC using the USB cable.</p></li>
+<li><p>Connect the 6-way 2.54mm header cable to the Nucleo development board <a class="reference internal" href="#fig-ceprogramming-cryoegg"><span class="std std-numref">Figure 47.1</span></a>.</p></li>
+<li><p>Connect the 6-way 2.54mm header cable to the Cryoegg <a class="reference internal" href="#fig-ceprogramming-cryoegg"><span class="std std-numref">Figure 47.2</span></a>.</p></li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Ensure that <strong>P1</strong> on the Nulceo development board is connected to <strong>P1</strong> (<code class="docutils literal notranslate"><span class="pre">Vdd</span></code>) on the Cryoegg. You can use the colours of the cable to check this.</p>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Connect a power switch (<code class="docutils literal notranslate"><span class="pre">POWER_EN</span></code>, <a class="reference internal" href="#fig-ceprogramming-cryoegg"><span class="std std-numref">Figure 47.3</span></a>). You are now ready to program the Cryoegg.</p></li>
+</ol>
+<p>The following steps assume you have set up your the CHIL development environment. If not, follow the <a class="reference internal" href="../../devtools/devtools-2026.html#devenv"><span class="std std-ref">setup instructions</span></a> and then return to this step when completed.</p>
+<ol class="arabic simple" start="5">
+<li><p>Open STM32CubeIDE and ensure that the <code class="docutils literal notranslate"><span class="pre">cryoegg-2025</span></code> and <code class="docutils literal notranslate"><span class="pre">chillib</span></code> projects are open (check by right-clicking in the Project Explorer window).</p></li>
+</ol>
+<figure class="align-default" id="id2">
+<span id="fig-ce-main-c-cryoegg"></span><img alt="../../_images/main_c_programming_settings.png" src="../../_images/main_c_programming_settings.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 48 </span><span class="caption-text">STM32CubeIDE development environment and Cryoegg configuration settings.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="6">
+<li><p>Find <code class="docutils literal notranslate"><span class="pre">Core/Src/main.c</span></code> in the Project Explorer and open the file. Scroll down to the <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">main(void)</span></code> function (Line 116 at time of writing). This section defines the deployment behaviour of the instrument. If you wish to modify the behaviour, update these values in <code class="docutils literal notranslate"><span class="pre">main.c</span></code>. Each value is described below in the table below:</p></li>
+</ol>
+<div class="pst-scrollable-table-container"><table class="table" id="table-cryoegg-variables">
+<thead>
+<tr class="row-odd"><th class="head"><p>Varible name</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Units</p></th>
+<th class="head"><p>Default value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">deployment_sleep_period_s</span></code></p></td>
+<td><p>The time period in seconds to sleep between each deployment measurement.</p></td>
+<td><p>seconds</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">27</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">max_deployment_packets</span></code></p></td>
+<td><p>The total number of packets to send before entering long term deployment mode (max. value of 255).</p></td>
+<td><p>N/A</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">240</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">long_term_sleep_period_s</span></code></p></td>
+<td><p>The time period in seconds to sleep between each measurement.</p></td>
+<td><p>seconds</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">1797</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When defining sleep periods, account for the time period the instrument takes to make each measurement by subtracting 3 seconds from the desired value. For example, to have a deployment interval of 30 seconds, set <code class="docutils literal notranslate"><span class="pre">deployment_sleep_period_s</span> <span class="pre">=</span> <span class="pre">27</span></code>.</p>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>Open the <em>Debug Configurations</em> dialog box from <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">&gt;</span> <span class="pre">Debug</span> <span class="pre">Configurations</span></code> in the top menu bar.</p></li>
+</ol>
+<figure class="align-default" id="id3">
+<span id="fig-cedebug-conf-cryoegg"></span><img alt="../../_images/debug_configurations.png" src="../../_images/debug_configurations.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 49 </span><span class="caption-text">Debug Configuration settings to program the Cryoegg using STM32CubeIDE.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="8">
+<li><p>If there is no configuration available under <em>STM32 C/C++ Application</em> and ensure that the Debugger settings match those in <a class="reference internal" href="#fig-cedebug-conf-cryoegg"><span class="std std-numref">Figure 49</span></a>.</p></li>
+<li><p>When you are ready to program the Cryoegg, press the <em>Debug</em> button in the <em>Debug Configurations</em> dialog box.</p></li>
+</ol>
+<figure class="align-default" id="id4">
+<span id="fig-cehalt-after-debug"></span><img alt="../../_images/halt_after_debug.png" src="../../_images/halt_after_debug.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 50 </span><span class="caption-text">Code execution paused in debug mode after successful programing of Cryoegg.</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="10">
+<li><p>If you succesfully program the Cryoegg, you should see output in the Console which matches <a class="reference internal" href="#fig-cehalt-after-debug"><span class="std std-numref">Figure 50</span></a>. The programmer has halted execution of the program at the start of the main function. At this point, you can choose to:</p>
+<ol class="loweralpha simple">
+<li><p>Disconnect the programmer and power from the Cryoegg and test it at a later date.</p></li>
+<li><p>Continue to run the program and check sensor outputs (see Step 11) by pressing the resume icon (pink arrow in <a class="reference internal" href="#fig-cehalt-after-debug"><span class="std std-numref">Figure 50</span></a>).</p></li>
+</ol>
+</li>
+<li><p>Open the Serial Wire Viewer Output window to check the instrument is working. If you have not previously configured the Serial Wire Viewer, follow the instructions <a class="reference internal" href="../cryowurst/firmware.html#serial-wire-viewer-setup"><span class="std std-ref">here</span></a>.</p></li>
+</ol>
+<figure class="align-default" id="id5">
+<img alt="../../_images/swv_trace.png" src="../../_images/swv_trace.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 51 </span><span class="caption-text">Output from Cryoegg in the SWV ITM Data Console.</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>You have now succesfully programmed the Cryoegg for deployment. We recommend powering off the instrument and restarting it without the programming cable inserted before deployment.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>See <a class="reference internal" href="../cryowurst/firmware.html#tip-deployment-packets"><span class="std std-ref">here</span></a> for how to manually reset or adjust the value of <code class="docutils literal notranslate"><span class="pre">deployment_packets</span></code>.</p>
+</div>
+<p>The next sections describe the CHIL dataloggers which can be used to validate that the instruments are performing correctly before deployment.</p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="assembly.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Assembly</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../radio_config.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Radio modem configuration</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#firmware">Firmware</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#programming-using-stm32cubeide">Programming using STM32CubeIDE</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equipment">Equipment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#steps">Steps</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By M. R. Prior-Jones, L. Craw, J. D. Hawkins, S. F. Mann, J. Saade
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, M. R. Prior-Jones, L. Craw, J. D. Hawkins, S. F. Mann, J. Saade.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
