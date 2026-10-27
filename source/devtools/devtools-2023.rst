@@ -28,7 +28,7 @@ To begin, download the Arduino installer or use the local version in the offline
 
 7. If there is no menu bar at the top of Arduino IDE, press ``CTRL + SHIFT + P`` to open the *command palette*, type *View: toggle menu bar* and press ``Enter`` to show the 'hamburger' icon on the left hand side of the program. This gives access to the ``File`` menu options needed to open a new folder.
 
-.. figre:: /_static/img/arduino/arduino_toggle_menu.png
+.. figure:: /_static/img/arduino/arduino_toggle_menu.png
 
     Toggle the menu bar icon on the left hand side to access the `File` menu.
 

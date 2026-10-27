@@ -145,26 +145,26 @@ The repository URL and destination folders are given in the table below:
       - Repository URL
       - Destination folder
     * - chillib
-      - `https://github.com/chilcardiff/chillib`_
+      - `https://github.com/chilcardiff/chillib`__
       - ``C:\chil\chillib``
     * - cryoegg-2025
-      - `https://github.com/chilcardiff/cryoegg-2025`_
+      - `https://github.com/chilcardiff/cryoegg-2025`__
       - ``C:\chil\cryoegg-2025``
     * - cryowurst-2026
-      - `https://github.com/chilcardiff/cryowurst-2026`_
+      - `https://github.com/chilcardiff/cryowurst-2026`__
       - ``C:\chil\cyrowurst-2026``
     * - datalogger-firmware-2026
-      - `https://github.com/chilcardiff/datalogger-firmware-2026`_
+      - `https://github.com/chilcardiff/datalogger-firmware-2026`__
       - ``C:\chil\datalogger-firmware-2026``
     * - cryodecoder
-      - `https://github.com/chilcardiff/cryodecoder`_
+      - `https://github.com/chilcardiff/cryodecoder`__
       - ``C:\chil\cryodecoder``
 
 Once you have cloned all of the repositories above, you are ready to proceed to the next step.
 
 Step 3: Install Python 3.14
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Run the installer `python-3.14.5-amd64.exe` located in ``C:\tools\childev\installers``.
+Run the installer ``python-3.14.5-amd64.exe`` located in ``C:\tools\childev\installers``.
 
 #. Select **Customize installation** and "Add python.exe to PATH" before proceeding.
 
@@ -180,7 +180,7 @@ Run the installer `python-3.14.5-amd64.exe` located in ``C:\tools\childev\instal
 
 #. On the Advanced Options menu:
 
-   * Install Python 3.14 for all users [✓]
+   * Install Python 3.14 for all users [?] (user choice)
    * Associated files with Python [✓]
    * Create shorcuts for installed applications [✓]
    * Add Python to environment variables [✓]
@@ -345,7 +345,7 @@ Step 8: Install STM32CubeIDE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 You will need to use STM32CubeIDE to program CHIL instruments which use the STM32L4 series of microcontrollers - this includes Cryoeggs, Cryowurst, Cryobeans, SmartSnowStake, etc.
 
-#. Unzip the installer located with `st-stm32cubeide_2.1.1_28236_20260312_0043_x86_64.exe.zip` to a location of your choice.
+#. Unzip the installer located in `C:\tools\childev\installers\st-stm32cubeide_2.1.1_28236_20260312_0043_x86_64.exe.zip` to a location of your choice.
 #. Run the installer file (`st-stm32cubeide_2.1.1_28236_20260312_0043_x86_64.exe`). Press *Next >* when it loads to begin installation.
 
 .. figure:: /_static/img/setup/stm32_begin.png
@@ -371,7 +371,7 @@ When STM32CubeIDE has loaded, you're ready to setup the development environment 
 
 Step 9: Setup STM32CubeIDE environment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Within the `chil` workspace you have just created in STM32CubeIDE (see previous step!), we can import the firmware libraries for CHIL instrumentation.
+Within the ``chil`` workspace you have just created in STM32CubeIDE (see previous step!), we can import the firmware libraries for CHIL instrumentation.
 
 Add `chillib` library
 """""""""""""""""""""
@@ -411,8 +411,19 @@ When finished, the project explorer in STM32CubeIDE should look like :numref:`Fi
 Step 10: Install Radiocrafts RCTools
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. note::
-    Todo: instructions for Radiocrafts MBUS-DEMO software.
+1.  Extract the MBUS tools from ``C:\tools\childev\installers`` and run ``MBUS-Tools_installer.msi``. Select *Next >* to proceed with the installation.
+
+2.  Install the MBUS tools to the default recommended folder. Select whether to install it for all users (*Everyone*) or only the current user (*Just me*) as desired. Press *Next >* to continue.
+
+.. figure:: /_static/img/setup/rctools_setup_folder.png
+
+    Selecting the installation location for the Radiocrafts MBUS tools.
+
+3.  Once the software has finished installing, press *Close* to complete the installation and verify the software has installed by locating it in the Windows menu.
+
+.. figure:: /_static/img/setup/rctools_setup_check.png
+
+    Verify that the Radiocrafts *MBUS-DEMO* and *MBUS-CCT* software have installed by searching from the Windows menu.
 
 Third-party software and instrument firmware
 --------------------------------------------

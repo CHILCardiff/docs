@@ -96,7 +96,7 @@ Installing RockBLOCK+ modem
 * Cut and strip RockBLOCK modem cable to suitable length (around 150mm). 
 * Mount the RockBLOCK to the bracket using the two thumbscrews. It only mounts with two screws despite having four mounting points. Use pink Loctite to secure them so that they don't rattle out.
 
-Wire the RockBLOCK to the PCB as shown in :numref:`Figure %s <_fig-datalogger_rockblock>`. Wire colours are as follows:
+Wire the RockBLOCK to the PCB as shown in :numref:`Figure %s <fig-datalogger_rockblock>`. Wire colours are as follows:
 
 .. raw:: html
 

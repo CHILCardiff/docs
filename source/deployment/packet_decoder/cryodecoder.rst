@@ -101,7 +101,7 @@ Log file
 ^^^^^^^^
 The ``logger_\*.log`` file contains output from the datalogger that is prefixed with *#* (the log or comment symbol). Each line is prefixed with a logging level and timestamp which corresponds to the time on the host PC adjusted to UTC.
 
-.. code-block:: log
+.. code-block:: 
     
     [INFO] 2026-10-14 12:01:05,971:  ---------------- Receiver sensors ----------------
     [INFO] 2026-10-14 12:01:06,005:  Time: 2026-10-14 11:01:05, Display update: 10 s
@@ -148,8 +148,8 @@ The cryodecoder library can also be used to parse `.log` files from CHIL datalog
 
 3.  Once the file has finished decoding, it will show a message with the total number of packets (blocks) decoded. A summary of the top-level blocks decoded will also be displayed.
 
-.. figure:: /_static/img/cryodecoder/img/cryodecoder/file_decoder.png
+.. figure:: /_static/img/cryodecoder/file_decoder.png
 
     Example commands to decode ``*.log`` files from CHIL dataloggers.
 
-See :ref:`csvfile` for more information on the format of the decoded CSV file. If you wish to interrogate the raw data in more detail, we recommend using the Python API which is described :ref:`here <https://chilcardiff.github.io/cryodecoder/reference/>`.
+See the CSV file `documentation <https://chilcardiff.github.io/cryodecoder/csv/logfile.html>`__ for more information on the format of the decoded CSV file. If you wish to interrogate the raw data in more detail, we recommend using the Python API which is described `here <https://chilcardiff.github.io/cryodecoder/reference/>`.
