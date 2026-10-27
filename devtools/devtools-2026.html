@@ -1,0 +1,1172 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Development environment &#8212; CHIL Documentation 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=4418a689" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+
+    <script src="../_static/documentation_options.js?v=e1a75a79"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'devtools/devtools-2026';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Arduino IDE" href="devtools-2023.html" />
+    <link rel="prev" title="Documentation" href="../index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="CHIL Documentation 0.1 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="CHIL Documentation 0.1 documentation - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Software setup</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="devtools-2023.html">Arduino IDE (archive)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../instruments/index.html">Instruments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../instruments/overview.html">Overview</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../instruments/cryowurst/index.html">Cryowurst</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../instruments/cryowurst/assembly.html">Assembly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../instruments/cryowurst/firmware.html">Firmware and programming</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../instruments/cryoegg/index.html">Cryoegg</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../instruments/cryoegg/assembly.html">Assembly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../instruments/cryoegg/firmware.html">Firmware and programming</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../instruments/radio_config.html">Radio configuration</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../datalogger/index.html">Datalogger</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../datalogger/assembly/index.html">Mechanical assembly</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../datalogger/assembly/tripod.html">Tripod datalogger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../datalogger/assembly/portable.html">Portable datalogger</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../datalogger/2023/index.html">2023 version</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../datalogger/2023/hardware.html">Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../datalogger/2023/firmware.html">Firmware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../datalogger/2023/servicing.html">Servicing</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../datalogger/2026/index.html">2026 version</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../datalogger/2026/hardware.html">Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../datalogger/2026/firmware.html">Firmware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../datalogger/2026/configuration.html">SD card configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../datalogger/2026/servicing.html">Servicing</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../deployment/packet_decoder.html">Packet decoders</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/packet_decoder/cryodecoder.html">Cryodecoder (2026)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/packet_decoder/cryoegg_2023.html">Cryoegg decoder (2023)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/packet_decoder/cryowurst_2023.html">Cryowurst decoder (2023)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../deployment/index.html">Deployment</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/cryoegg.html">Cryoegg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/cryowurst.html">Cryoegg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/datalogger.html">Datalogger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/cloudloop.html">Satellite data (Cloudloop)</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/devtools/devtools-2026.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Development environment</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-steps">Installation steps</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-download-installation-files">Step 1: Download installation files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-setup-code-repositories">Step 2: Setup code repositories</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-install-python-3-14">Step 3: Install Python 3.14</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-install-cryodecoder">Step 4: Install cryodecoder</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-install-vs-code">Step 5: Install VS Code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-install-platformio">Step 6: Install PlatformIO</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-install-datalogger-firmware">Step 7: Install datalogger firmware</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-install-stm32cubeide">Step 8: Install STM32CubeIDE</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-setup-stm32cubeide-environment">Step 9: Setup STM32CubeIDE environment</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#add-chillib-library">Add <cite>chillib</cite> library</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#add-instrument-firmware">Add instrument firmware</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-install-radiocrafts-rctools">Step 10: Install Radiocrafts RCTools</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#third-party-software-and-instrument-firmware">Third-party software and instrument firmware</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#third-party-software">Third-party software</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#firmware-and-software">Firmware and software</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="development-environment">
+<span id="devenv"></span><h1>Development environment<a class="headerlink" href="#development-environment" title="Link to this heading">#</a></h1>
+<p>Various code repositories and third-party software packages are required to update the firmware on CHIL instruments and dataloggers, as well as receive and decode the packets that they transmit.</p>
+<p>This page describes instructions for setting up a development environment on a Windows PC so that you can:</p>
+<ul class="simple">
+<li><p>reprogram CHIL instruments with new measurement settings</p></li>
+<li><p>update firmware on CHIL dataloggers to the latest version</p></li>
+<li><p>decode and interpret packets from CHIL instruments and dataloggers</p></li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Follow the instructions carefully, <strong>do not use</strong> default options for all the installation steps!</p>
+</div>
+<section id="installation-steps">
+<h2>Installation steps<a class="headerlink" href="#installation-steps" title="Link to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These instructions assume that you <strong>do not have access to the Internet</strong>. Even if you do, it is worthwhile disabling your WiFi or Ethernet connection while installing the software to ensure that it can be replicated in the field.</p>
+</div>
+<p>The installation instructions below were tested on 2026-05-21 using a Windows laptop without a internet connection. If you find any issues with the instructions below, let us know by <a class="reference external" href="mailto:hawkinsj22&#37;&#52;&#48;cardiff&#46;ac&#46;uk">sending an email</a>.</p>
+<p>The latest files for the development environment are stored in a ZIP archive (<code class="docutils literal notranslate"><span class="pre">childev.zip</span></code>) which should have a folder structure matching the below:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">firmware/</span></code> instrument and datalogger firmware.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">2023/</span></code> 2023 firmware.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">Arduino/</span></code> Arduino versions of datalogger firmware.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PlatformIO/</span></code> PlatformIO versions of datalogger firmware.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2026/</span></code> 2026 firmware.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">installers/</span></code> third-party software installers.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">software/</span></code> CHIL developed software and Python libraries.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vscode_extensions/</span></code> useful extensions for Visual Studio Code.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">wheels/</span></code> Python wheels for installing modules offline.</p></li>
+</ul>
+<section id="step-1-download-installation-files">
+<h3>Step 1: Download installation files<a class="headerlink" href="#step-1-download-installation-files" title="Link to this heading">#</a></h3>
+<p><strong>Extract</strong> <code class="docutils literal notranslate"><span class="pre">childev.zip</span></code> <strong>to a folder named</strong> <code class="docutils literal notranslate"><span class="pre">C:\tools\childev</span></code> <strong>on your PC</strong>.</p>
+<figure class="align-default" id="id2">
+<img alt="../_images/folder_childev.png" src="../_images/folder_childev.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Folder structure of the <code class="docutils literal notranslate"><span class="pre">C:\tools\childev</span></code> folder.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>If you are using a <strong>complete version of</strong> <code class="docutils literal notranslate"><span class="pre">childev.zip</span></code> <strong>you can skip the remainder of this step</strong>.</p>
+<p>We cannot host the complete <code class="docutils literal notranslate"><span class="pre">childev.zip</span></code> archive online because of the inclusion of installers for third-party software. Before continuing to the next step, download these third-party software installers (also <a class="reference internal" href="#third-party-software"><span class="std std-ref">listed below</span></a>) and copy them to the <cite>installers</cite> directory in your <code class="docutils literal notranslate"><span class="pre">C:\tools\childev</span></code> folder.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="id3">
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">Third-party software installers.</span><a class="headerlink" href="#id3" title="Link to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Used for</p></th>
+<th class="head"><p>Version</p></th>
+<th class="head"><p>URL</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>VS Code</strong></p></td>
+<td><p>Text editor and development environment CHIL datalogger firmware.</p></td>
+<td><p>v1.121.0</p></td>
+<td><p><a class="reference external" href="https://code.visualstudio.com/updates/v1_121">Download</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Python</strong></p></td>
+<td><p>Programming environment for CHIL packet decoding software.</p></td>
+<td><p>v3.14.0+</p></td>
+<td><p><a class="reference external" href="https://www.python.org/downloads/release/python-3140/">Download</a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>STM32CubeIDE</strong></p></td>
+<td><p>STM32 microcontroller development environment for instrument firmware.</p></td>
+<td><p>v2.1.1</p></td>
+<td><p><a class="reference external" href="https://community.st.com/stm32cubeide-mcus-28/stm32cubeide-2-1-1-released-163841">Download (login required)</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Radiocrafts RCTools</strong></p></td>
+<td><p>Programming radio module IDs and debugging.</p></td>
+<td><p>v1.98</p></td>
+<td><p><a class="reference external" href="https://radiocrafts.com/resources/supporting-software-and-software-tools/#wirelessmbusrctools">Download (login required)</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>We recommend keeping local copies of the offline installers on your machine, a hard drive or USB flash drive in case you need to reset your development environment while in the field.</p>
+</section>
+<section id="step-2-setup-code-repositories">
+<h3>Step 2: Setup code repositories<a class="headerlink" href="#step-2-setup-code-repositories" title="Link to this heading">#</a></h3>
+<p>In this step, you will create a local copy of all the firmware and software for the CHIL instruments and datalogger on your PC.</p>
+<p><strong>If you are using the provided versions of firmware and software from</strong> <code class="docutils literal notranslate"><span class="pre">childev.zip</span></code>, you will need to extract the following folders to your hard drive. Source folder refers to the location within <code class="docutils literal notranslate"><span class="pre">chilldev.zip</span></code> and destination folder refers to the path on your hard drive.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>When extracting ZIP archives, you can end up with “nested” folders with the same name as the repository. For example, extracting <code class="docutils literal notranslate"><span class="pre">archive.zip</span></code> can result in a folder structure of <code class="docutils literal notranslate"><span class="pre">archive\archive\</span></code>. The following instructions <strong>assume that you have manually de-nested any folders</strong> after extraction.</p>
+</div>
+<div class="pst-scrollable-table-container"><table class="table" id="id4">
+<caption><span class="caption-number">Table 2 </span><span class="caption-text">Firmware and software folders for the latest version of CHIL instruments.</span><a class="headerlink" href="#id4" title="Link to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Source folder</p></th>
+<th class="head"><p>Destination folder</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">firmware\2026\chillib-20260521.zip</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">C:\chil\chillib</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">firmware\2026\cryoegg-2025-20260521.zip</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">C:\chil\cryoegg-2025</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">firmware\2026\cryowurst-2026-20260611.zip</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">C:\chil\cryowurst-2026</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">firmware\2026\datalogger-firmware-2026-20261023.zip</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">C:\chil\datalogger-firmware-2026</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">software\cryodecoder-2.1.0-beta.zip</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">C:\chil\cryodecoder-2.1.0-beta`</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Older verisons of firmware and software for the 2023 versions of CHIL instruments and dataloggers are also available. The receiver firmware is available in two formats: one to be used with VS Code and Platform IO and one to be used with Arduino IDE.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="id5">
+<caption><span class="caption-number">Table 3 </span><span class="caption-text">Archive firmware and software folders for older versions of CHIL instruments.</span><a class="headerlink" href="#id5" title="Link to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Source folder</p></th>
+<th class="head"><p>Destination folder</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">software\CryoeggPacketDecoder_Python314.zip</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">C:\chil\CryoeggPacketDecoder`</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">software\cryowurst-packet-decoder-DualChannel-2024-withKellerandIMUaccel.zip</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">C:\chil\cryowurst-packet-decoder</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">firmware\2023\cryoegg-2022.zip</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">C:\chil\cryoegg-2022</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">firmware\2023\cryowurst-2023.zip</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">C:\chil\cryowurst-2023</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">firmware\2023\Arduino\datalogger-2023-cryoegg-arduino</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">C:\chil\datalogger-2023-cryoegg-arduino</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">firmware\2023\Arduino\datalogger-2023-cryowurst-arduino</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">C:\chil\datalogger-2023-cryowurst-arduino</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">firmware\2023\Arduino\datalogger-2023-cryoegg-platformio</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">C:\chil\datalogger-2023-cryoegg-platformio</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">firmware\2023\Arduino\datalogger-2023-cryowurst-platformio</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">C:\chil\datalogger-2023-cryowurst-platformio</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Alternatively, it is possible clone the newer (2026) firmware from GitHub so that you can keep it updated to the latest version. <strong>If you are cloning firmware from GitHub</strong>, you will need to clone the following repositories using the command</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span><span class="o">[</span>repository_url<span class="o">]</span><span class="w"> </span><span class="o">[</span>destination_folder<span class="o">]</span>
+</pre></div>
+</div>
+<p>The repository URL and destination folders are given in the table below:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Repository name</p></th>
+<th class="head"><p>Repository URL</p></th>
+<th class="head"><p>Destination folder</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>chillib</p></td>
+<td><p><a href="#id31"><span class="problematic" id="id32">`https://github.com/chilcardiff/chillib`__</span></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">C:\chil\chillib</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>cryoegg-2025</p></td>
+<td><p><a href="#id31"><span class="problematic" id="id33">`https://github.com/chilcardiff/cryoegg-2025`__</span></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">C:\chil\cryoegg-2025</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>cryowurst-2026</p></td>
+<td><p><a href="#id31"><span class="problematic" id="id34">`https://github.com/chilcardiff/cryowurst-2026`__</span></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">C:\chil\cyrowurst-2026</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>datalogger-firmware-2026</p></td>
+<td><p><a href="#id31"><span class="problematic" id="id35">`https://github.com/chilcardiff/datalogger-firmware-2026`__</span></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">C:\chil\datalogger-firmware-2026</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>cryodecoder</p></td>
+<td><p><a href="#id31"><span class="problematic" id="id36">`https://github.com/chilcardiff/cryodecoder`__</span></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">C:\chil\cryodecoder</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Once you have cloned all of the repositories above, you are ready to proceed to the next step.</p>
+</section>
+<section id="step-3-install-python-3-14">
+<h3>Step 3: Install Python 3.14<a class="headerlink" href="#step-3-install-python-3-14" title="Link to this heading">#</a></h3>
+<p>Run the installer <code class="docutils literal notranslate"><span class="pre">python-3.14.5-amd64.exe</span></code> located in <code class="docutils literal notranslate"><span class="pre">C:\tools\childev\installers</span></code>.</p>
+<ol class="arabic simple">
+<li><p>Select <strong>Customize installation</strong> and “Add python.exe to PATH” before proceeding.</p></li>
+</ol>
+<figure class="align-default" id="id6">
+<img alt="../_images/python_customise_path.png" src="../_images/python_customise_path.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Initialise a custom installation of Python 3.14.</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple">
+<li><p>On the Optional Features menu, ensure all options are selected except for “for all users”.</p></li>
+</ol>
+<figure class="align-default" id="id7">
+<img alt="../_images/python_optional_features.png" src="../_images/python_optional_features.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Optional installation features for Python 3.14.</span><a class="headerlink" href="#id7" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple">
+<li><p>On the Advanced Options menu:</p>
+<ul class="simple">
+<li><p>Install Python 3.14 for all users [?] (user choice)</p></li>
+<li><p>Associated files with Python [✓]</p></li>
+<li><p>Create shorcuts for installed applications [✓]</p></li>
+<li><p>Add Python to environment variables [✓]</p></li>
+<li><p>Modify the install location to <code class="docutils literal notranslate"><span class="pre">C:\python\python314</span></code>.</p></li>
+</ul>
+</li>
+</ol>
+<figure class="align-default" id="id8">
+<img alt="../_images/python_advanced_options.png" src="../_images/python_advanced_options.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Advanced options for Python 3.14 install.</span><a class="headerlink" href="#id8" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple">
+<li><p>Press install and wait for the installation to complete.</p></li>
+</ol>
+<figure class="align-default" id="id9">
+<img alt="../_images/python_complete.png" src="../_images/python_complete.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Successful installation of Python 3.14.</span><a class="headerlink" href="#id9" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple">
+<li><p>Restart your PC.</p></li>
+</ol>
+</section>
+<section id="step-4-install-cryodecoder">
+<h3>Step 4: Install cryodecoder<a class="headerlink" href="#step-4-install-cryodecoder" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Open a terminal (command prompt) window and navigate to the folder where you have extracted the repositories.</p></li>
+<li><p>Navigate to the repository folder, create a virtual environment and activate it using the steps below:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">C</span><span class="p">:</span><span class="o">/</span><span class="n">chil</span>
+<span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="o">.</span><span class="n">env</span>
+<span class="o">.</span>\<span class="o">.</span><span class="n">env</span>\<span class="n">Scripts</span>\<span class="n">activate</span>
+</pre></div>
+</div>
+<figure class="align-default" id="id10">
+<img alt="../_images/cmd_virtual_env.png" src="../_images/cmd_virtual_env.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Create and activate  virtual environment.</span><a class="headerlink" href="#id10" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple">
+<li><p><strong>Once the virtual environment is activated</strong>, install cryodecoder in editable mode using the following command:</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You will need to change <code class="docutils literal notranslate"><span class="pre">C:\tools\childev\wheels</span></code> to the path where you extracted the <code class="docutils literal notranslate"><span class="pre">childev\wheels</span></code> folder.</p>
+<p>You will also need to change <code class="docutils literal notranslate"><span class="pre">cryodecoder-2.1.0-beta</span></code> to the name of your <em>cryodecoder</em> folder in <code class="docutils literal notranslate"><span class="pre">C:\chil</span></code>.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">index</span> <span class="o">--</span><span class="n">find</span><span class="o">-</span><span class="n">links</span><span class="o">=</span><span class="n">C</span><span class="p">:</span>\<span class="n">tools</span>\<span class="n">childev</span>\<span class="n">wheels</span> <span class="o">-</span><span class="n">e</span> <span class="o">./</span><span class="n">cryodecoder</span><span class="o">-</span><span class="mf">2.1.0</span><span class="o">-</span><span class="n">beta</span>
+</pre></div>
+</div>
+<figure class="align-default" id="id11">
+<img alt="../_images/cmd_success_install.png" src="../_images/cmd_success_install.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Successful install of cryodecoder (and requirements) in editable mode.</span><a class="headerlink" href="#id11" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple">
+<li><p>You can validate that cryodecoder has installed by running the <code class="docutils literal notranslate"><span class="pre">cryodecoder</span> <span class="pre">--help</span></code> command.</p></li>
+</ol>
+<figure class="align-default" id="id12">
+<img alt="../_images/cmd_cryodecoder_help.png" src="../_images/cmd_cryodecoder_help.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Help message from cryodecoder, indicating a successful install.</span><a class="headerlink" href="#id12" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="step-5-install-vs-code">
+<h3>Step 5: Install VS Code<a class="headerlink" href="#step-5-install-vs-code" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Located in <code class="docutils literal notranslate"><span class="pre">C:\tools\childev\installers</span></code>, run <cite>VSCodeUserSetup-x64-1.121.0.exe</cite>.</p></li>
+<li><p>Select “I accept the agreement” on the following splash screen and install the software to the default location.</p></li>
+</ol>
+<figure class="align-default" id="id13">
+<img alt="../_images/vscode_agreement.png" src="../_images/vscode_agreement.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Accept license agreement for VS Code.</span><a class="headerlink" href="#id13" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple">
+<li><p>Use the default installation folder and press <em>Next</em>.</p></li>
+<li><p>Use the default start menu folder and press <em>Next</em>.</p></li>
+<li><p>Ensure that “Add to PATH” is selected and optionally select to create a desktop icon.</p></li>
+</ol>
+<figure class="align-default" id="id14">
+<img alt="../_images/vscode_path.png" src="../_images/vscode_path.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">Set PATH option for VS Code.</span><a class="headerlink" href="#id14" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple">
+<li><p>Press <em>Install</em> and wait for the installation to complete.</p></li>
+</ol>
+<figure class="align-default" id="id15">
+<img alt="../_images/vscode_launch.png" src="../_images/vscode_launch.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Launch VS Code once installation has finished.</span><a class="headerlink" href="#id15" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple">
+<li><p>Once the installation has completed, load VS Code and proceed to the next step of installing PlatformIO.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you receive any notifications or prompts regarding GitHub and AI-powered development, these can be ignored <strong>unless you are using GitHub to manage your repositories</strong>.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If you are connected to the internet, ignore any prompts to update VS Code or the extensions (next step).</p>
+</div>
+</section>
+<section id="step-6-install-platformio">
+<h3>Step 6: Install PlatformIO<a class="headerlink" href="#step-6-install-platformio" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Open VS Code and open the “Extensions” menu (<cite>View &gt; Extensions</cite> from the top menu bar).</p></li>
+</ol>
+<figure class="align-default" id="id16">
+<img alt="../_images/vscode_extensions.png" src="../_images/vscode_extensions.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Open Extensions menu in VS Code.</span><a class="headerlink" href="#id16" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="2">
+<li><p>Select the <cite>Install from VSIX</cite> option from the three dots (<cite>…</cite>) menu at the top of the extensions screen.</p></li>
+</ol>
+<figure class="align-default" id="id17">
+<img alt="../_images/vscode_installfromvsix.png" src="../_images/vscode_installfromvsix.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Install extesions from VSIX files in VS Code.</span><a class="headerlink" href="#id17" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic" start="3">
+<li><p>Navgiate to the <cite>childev/vscode_extensions</cite> folder and install the following extensions:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>VS Code cpptools: <cite>ms-vscode.cpptools-1.32.2-win32-x64.vsix</cite></p></li>
+<li><p>VS Code cpptools extension: <cite>ms-vscode.cpptools-extension-pack-1.5.1.vsix</cite></p></li>
+<li><p>VS Code cpp-devtools: <cite>ms-vscode.cpp-devtools-0.5.13.vsix</cite></p></li>
+<li><p>VS Code cmake-tools: <cite>ms-vscode.cmake-tools-1.23.52.vsix</cite></p></li>
+<li><p>PlatformIO: <cite>platformio.platformio-ide-3.3.4-win32-x64.vsix</cite></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Extract the contents of <cite>.platformio.zip</cite> folder from <cite>childev/installers</cite> to <cite>C:/Users/[username]/.platformio</cite> - make sure you don’t end up with a nested folder (i.e. <cite>.platformio/.platformio/…</cite>). This is a large ZIP archive so might take some time!</p></li>
+</ol>
+<figure class="align-default" id="id18">
+<img alt="../_images/platformio_folder.png" src="../_images/platformio_folder.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Copy the contents of the <code class="docutils literal notranslate"><span class="pre">.platformio</span></code> folder to match this figure.</span><a class="headerlink" href="#id18" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="4">
+<li><p>Restart your PC.</p></li>
+</ol>
+</section>
+<section id="step-7-install-datalogger-firmware">
+<h3>Step 7: Install datalogger firmware<a class="headerlink" href="#step-7-install-datalogger-firmware" title="Link to this heading">#</a></h3>
+<p>In the example below, the 2026 firmware is setup (<cite>datalogger-firmware-2026-*</cite>). If you are using the older (2023) version of the datalogger, complete the same steps for <cite>datalogger-2023-cryoegg</cite> or <cite>datalogger-2023-cryowurst</cite>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Alternative versions of the datalogger firmware for Arduino IDE are available in the <code class="docutils literal notranslate"><span class="pre">datalogger-2023-*-arduino</span></code> folders. Follow the instructions <a class="reference internal" href="devtools-2023.html#devenvarduino"><span class="std std-ref">here</span></a>.</p>
+</div>
+<ol class="arabic simple">
+<li><p>If you haven’t already, extract the contents of the datalogger firmware <code class="docutils literal notranslate"><span class="pre">firmware/2026/datalogger-firmware-2026-*</span></code> to <code class="docutils literal notranslate"><span class="pre">C:/chil/datalogger-firmware-2026</span></code>. Double check that you haven’t nested any folders - firmware folder should contain the <code class="docutils literal notranslate"><span class="pre">data/</span></code>, <code class="docutils literal notranslate"><span class="pre">lib/</span></code> and <code class="docutils literal notranslate"><span class="pre">src/</span></code> folders.</p></li>
+<li><p>Extract the contents of <cite>firmware/chillib-*</cite> library to <cite>C:/chil/chillib-*</cite>. As above, check to avoid nested folders.</p></li>
+<li><p>Open VS Code and open the <cite>C:/chil/datalogger-firmware-2026</cite> folder.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If prompted to trust the authors of the repository, confirm that you trust us!</p>
+<p>Alternatively, you may need to press “Restricted Mode” in the bottom left of the window and agree to trust the folder.</p>
+</div>
+<figure class="align-default" id="id19">
+<img alt="../_images/vscode_trust.png" src="../_images/vscode_trust.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Trust the repository before being able to proceed.</span><a class="headerlink" href="#id19" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="4">
+<li><p>Open <code class="docutils literal notranslate"><span class="pre">platform.ini</span></code> and replace <code class="docutils literal notranslate"><span class="pre">symlink://../chillib</span></code> with the path to the <em>chillib</em> folder you just extracted (i.e. <code class="docutils literal notranslate"><span class="pre">C:/chil/chillib-*</span></code>).</p></li>
+<li><p>Wait for the library manager to finish installing the project libraries.</p></li>
+</ol>
+<figure class="align-default" id="id20">
+<img alt="../_images/platformio_libraries.png" src="../_images/platformio_libraries.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Update <em>chillib</em> location and allow PlatformIO to install libraries.</span><a class="headerlink" href="#id20" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="4">
+<li><p>Press <cite>CTRL+SHIFT+P</cite>, type in <cite>PlatformIO: Build</cite> to the text box at the top of the screen and press enter. This will compile the Datalogger firmware. An output terminal should appear at the bottom of the screen and show a <cite>[SUCCESS]</cite> message - this might take a while the first time you run the build command.</p></li>
+</ol>
+<figure class="align-default" id="id21">
+<img alt="../_images/platformio_build.png" src="../_images/platformio_build.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Build the project to verify all dependencies have been installed.</span><a class="headerlink" href="#id21" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="5">
+<li><p>If you have a datalogger board (or just the Arduino Feather M0) to hand, plug it into the USB connection of the laptop, press <cite>CTRL+SHIFT+P</cite> and type <cite>PlatformIO: Upload</cite>. Press enter and the firmware should be uploaded to the datalogger.</p></li>
+</ol>
+<figure class="align-default" id="id22">
+<img alt="../_images/platformio_success.png" src="../_images/platformio_success.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Success message on completion of a successful build.</span><a class="headerlink" href="#id22" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="step-8-install-stm32cubeide">
+<h3>Step 8: Install STM32CubeIDE<a class="headerlink" href="#step-8-install-stm32cubeide" title="Link to this heading">#</a></h3>
+<p>You will need to use STM32CubeIDE to program CHIL instruments which use the STM32L4 series of microcontrollers - this includes Cryoeggs, Cryowurst, Cryobeans, SmartSnowStake, etc.</p>
+<ol class="arabic simple">
+<li><p>Unzip the installer located in <cite>C:toolschildevinstallersst-stm32cubeide_2.1.1_28236_20260312_0043_x86_64.exe.zip</cite> to a location of your choice.</p></li>
+<li><p>Run the installer file (<cite>st-stm32cubeide_2.1.1_28236_20260312_0043_x86_64.exe</cite>). Press <em>Next &gt;</em> when it loads to begin installation.</p></li>
+</ol>
+<figure class="align-default" id="id23">
+<img alt="../_images/stm32_begin.png" src="../_images/stm32_begin.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Start the STM32CubeIDE installation.</span><a class="headerlink" href="#id23" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple">
+<li><p>Agree to the license and press <em>Next &gt;</em>.</p></li>
+<li><p>Use the default installation folder and press <em>Next &gt;</em>.</p></li>
+<li><p>When prompted to choose components to install, ensure that both <em>SEGGER J-Link drivers</em> and <em>ST-LINK</em> drivers are selected and press <em>Install &gt;</em> to begin.</p></li>
+</ol>
+<figure class="align-default" id="id24">
+<img alt="../_images/stm32_drivers.png" src="../_images/stm32_drivers.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Ensure that ST-LINK and SEGGER J-Link drivers are selected to be installed.</span><a class="headerlink" href="#id24" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple">
+<li><p>Launch the STM32CubeIDE software.</p></li>
+<li><p>When prompted to select a directory as a workspace update the filepath to <cite>C:/Users/&lt;username&gt;/STM32CubeIDE/chil</cite> and select <cite>Launch</cite>.</p></li>
+</ol>
+<figure class="align-default" id="id25">
+<img alt="../_images/stm32_path.png" src="../_images/stm32_path.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Set the path for the STM32CubeIDE workspace.</span><a class="headerlink" href="#id25" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>When STM32CubeIDE has loaded, you’re ready to setup the development environment for a CHIL instrument. Close the <em>Information Center</em> view to reveal the Project Explorer.</p>
+</section>
+<section id="step-9-setup-stm32cubeide-environment">
+<h3>Step 9: Setup STM32CubeIDE environment<a class="headerlink" href="#step-9-setup-stm32cubeide-environment" title="Link to this heading">#</a></h3>
+<p>Within the <code class="docutils literal notranslate"><span class="pre">chil</span></code> workspace you have just created in STM32CubeIDE (see previous step!), we can import the firmware libraries for CHIL instrumentation.</p>
+<section id="add-chillib-library">
+<h4>Add <cite>chillib</cite> library<a class="headerlink" href="#add-chillib-library" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Select File &gt; Import…. A dialog box will open. Choose the option General &gt; Existing Projects into Workspace and press <em>Next &gt;</em>.</p></li>
+</ol>
+<figure class="align-default" id="id26">
+<img alt="../_images/stm32_import.png" src="../_images/stm32_import.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 22 </span><span class="caption-text">Import <em>chillib</em> as an existing project.</span><a class="headerlink" href="#id26" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="2">
+<li><p>Browse for the <code class="docutils literal notranslate"><span class="pre">chillib-*</span></code> folder in <code class="docutils literal notranslate"><span class="pre">C:/chil</span></code> and select it as the root directory. If succesful, you should see a project named <code class="docutils literal notranslate"><span class="pre">chillib</span></code> in the Projects window. Press <em>Finish</em>.</p></li>
+</ol>
+<figure class="align-default" id="id27">
+<img alt="../_images/stm32_import_path.png" src="../_images/stm32_import_path.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Select the <em>chillib</em> project.</span><a class="headerlink" href="#id27" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="add-instrument-firmware">
+<h4>Add instrument firmware<a class="headerlink" href="#add-instrument-firmware" title="Link to this heading">#</a></h4>
+<p>Repeat the steps above for the following folders in <code class="docutils literal notranslate"><span class="pre">C:/chil</span></code> (or wherever you copied the repositories to).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cryoegg-2025-*</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cryoegg-2022</span></code> (archive version of the Cryoegg firmware for pre-2026 hardware).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cryowurst-2026-*</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cryowurst-2023</span></code> (archive version of the Cryowurst firmware for 2023 hardware).</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">cryoegg-2025-*</span></code> folder contains an additional project named <code class="docutils literal notranslate"><span class="pre">test_IMU</span></code>. You can unselect this project before pressing <em>Finish</em> to avoid importing it into the workspace.</p>
+</div>
+<p>When finished, the project explorer in STM32CubeIDE should look like <a class="reference internal" href="#fig-stm32-project-explorer"><span class="std std-numref">Figure 24</span></a>.</p>
+<figure class="align-default" id="id28">
+<span id="fig-stm32-project-explorer"></span><img alt="../_images/stm32_all_projects.png" src="../_images/stm32_all_projects.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 24 </span><span class="caption-text">All STM32 projects imported into STM32CubeIDE.</span><a class="headerlink" href="#id28" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="step-10-install-radiocrafts-rctools">
+<h3>Step 10: Install Radiocrafts RCTools<a class="headerlink" href="#step-10-install-radiocrafts-rctools" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Extract the MBUS tools from <code class="docutils literal notranslate"><span class="pre">C:\tools\childev\installers</span></code> and run <code class="docutils literal notranslate"><span class="pre">MBUS-Tools_installer.msi</span></code>. Select <em>Next &gt;</em> to proceed with the installation.</p></li>
+<li><p>Install the MBUS tools to the default recommended folder. Select whether to install it for all users (<em>Everyone</em>) or only the current user (<em>Just me</em>) as desired. Press <em>Next &gt;</em> to continue.</p></li>
+</ol>
+<figure class="align-default" id="id29">
+<img alt="../_images/rctools_setup_folder.png" src="../_images/rctools_setup_folder.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Selecting the installation location for the Radiocrafts MBUS tools.</span><a class="headerlink" href="#id29" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="3">
+<li><p>Once the software has finished installing, press <em>Close</em> to complete the installation and verify the software has installed by locating it in the Windows menu.</p></li>
+</ol>
+<figure class="align-default" id="id30">
+<img alt="../_images/rctools_setup_check.png" src="../_images/rctools_setup_check.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Verify that the Radiocrafts <em>MBUS-DEMO</em> and <em>MBUS-CCT</em> software have installed by searching from the Windows menu.</span><a class="headerlink" href="#id30" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="third-party-software-and-instrument-firmware">
+<h2>Third-party software and instrument firmware<a class="headerlink" href="#third-party-software-and-instrument-firmware" title="Link to this heading">#</a></h2>
+<section id="third-party-software">
+<span id="id1"></span><h3>Third-party software<a class="headerlink" href="#third-party-software" title="Link to this heading">#</a></h3>
+<p>The various third-party software tools that make up the development and deployment environment for CHIL isntruments and dataloggers are listed below.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Used for</p></th>
+<th class="head"><p>Version</p></th>
+<th class="head"><p>URL</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>VS Code</strong></p></td>
+<td><p>Text editor and development environment CHIL datalogger firmware.</p></td>
+<td><p>v1.121.0</p></td>
+<td><p><a class="reference external" href="https://code.visualstudio.com/updates/v1_121">Download</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Python</strong></p></td>
+<td><p>Programming environment for CHIL packet decoding software.</p></td>
+<td><p>v3.14.0+</p></td>
+<td><p><a class="reference external" href="https://www.python.org/downloads/release/python-3140/">Download</a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>STM32CubeIDE</strong></p></td>
+<td><p>STM32 microcontroller development environment for instrument firmware.</p></td>
+<td><p>v2.1.1</p></td>
+<td><p><a class="reference external" href="https://community.st.com/stm32cubeide-mcus-28/stm32cubeide-2-1-1-released-163841">Download (login required)</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Radiocrafts RCTools</strong></p></td>
+<td><p>Programming radio module IDs and debugging.</p></td>
+<td><p>v1.98</p></td>
+<td><p><a class="reference external" href="https://radiocrafts.com/resources/supporting-software-and-software-tools/#wirelessmbusrctools">Download (login required)</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="firmware-and-software">
+<span id="firmware"></span><h3>Firmware and software<a class="headerlink" href="#firmware-and-software" title="Link to this heading">#</a></h3>
+<p>GitHub is used to store and provide version control for CHIL instrument and datalogger firmware, as the <a class="reference external" href="https://chilcardiff.github.io/cryodecoder/">cryodecoder</a> Python library which is used to decode packets.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Library name</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Release</p></th>
+<th class="head"><p>URL</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>chillib</p></td>
+<td><p>Shared firmware library</p></td>
+<td><p>v20260521</p></td>
+<td><p><a class="github reference external" href="https://github.com/CHILCardiff/chillib/tree/v20260521">CHILCardiff/chillib</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>cryoegg-2025</p></td>
+<td><p>Cryoegg firmware and design files</p></td>
+<td><p>v20260521</p></td>
+<td><p><a class="github reference external" href="https://github.com/CHILCardiff/cryoegg-2025/tree/v20260521">CHILCardiff/cryoegg-2025</a></p></td>
+</tr>
+<tr class="row-even"><td><p>cryowurst-2026</p></td>
+<td><p>Cryowurst firmware and design files</p></td>
+<td><p>N/A</p></td>
+<td><p><a class="github reference external" href="https://github.com/CHILCardiff/cryowurst-2026/">CHILCardiff/cryowurst-2026</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>cryodecoder</p></td>
+<td><p>Python package and CLI interface to decode CHIL packets</p></td>
+<td><p>N/A</p></td>
+<td><p><a class="github reference external" href="https://github.com/CHILCardiff/cryodecoder/">CHILCardiff/cryodecoder</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Documentation</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="devtools-2023.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Arduino IDE</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-steps">Installation steps</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-download-installation-files">Step 1: Download installation files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-setup-code-repositories">Step 2: Setup code repositories</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-install-python-3-14">Step 3: Install Python 3.14</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-install-cryodecoder">Step 4: Install cryodecoder</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-install-vs-code">Step 5: Install VS Code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-install-platformio">Step 6: Install PlatformIO</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-install-datalogger-firmware">Step 7: Install datalogger firmware</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-install-stm32cubeide">Step 8: Install STM32CubeIDE</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-setup-stm32cubeide-environment">Step 9: Setup STM32CubeIDE environment</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#add-chillib-library">Add <cite>chillib</cite> library</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#add-instrument-firmware">Add instrument firmware</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-install-radiocrafts-rctools">Step 10: Install Radiocrafts RCTools</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#third-party-software-and-instrument-firmware">Third-party software and instrument firmware</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#third-party-software">Third-party software</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#firmware-and-software">Firmware and software</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By M. R. Prior-Jones, L. Craw, J. D. Hawkins, S. F. Mann, J. Saade
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, M. R. Prior-Jones, L. Craw, J. D. Hawkins, S. F. Mann, J. Saade.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
